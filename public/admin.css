@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+   background:#9c6858 ;
+   height: 50px;
+   width: max-content;
+   padding: 7px;
+   box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+   border: #9c6858 1px solid;
+   border-radius: 20px;
+}
+.btn a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3vmin;
+    font-weight: bolder;
+}
+.container{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    height: max-content;
+    width: 80%;
+    box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    margin: 10px 0px 10px 0px;
+    padding: 30px;
+    border-radius: 30px;
+}
+.card h3{
+    color: #9c6858;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.card p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-top: 9px;
+    text-align: justify;
+}
+span{
+    color: #9c6858;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+.card .btn{
+    height: 30px;
+    border-radius: 2px;
+    margin-top: 6px;
+}
+.content{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5vmin;
+    color: #9c6858;
+    font-weight: bolder;
+}
+.img, .fom{
+  width: 40%;
+  height: 70vh;
+  box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+  border-radius: 40px;
+  border: #9c6858 1PX solid;
+  background: transparent;
+}
+#wrong{
+    color: red;
+    display: none;
+    text-align: left;
+}
+.img{
+    background-image: url('./images/NASEEIM\ LOGO.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 40px;
+    border: #9c6858 1PX solid;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+form input, #btn{
+    width: 90%;
+    margin-top:20px;
+    height: 40px;
+    border: #9c6858 1px solid;
+    padding: 10px;
+    box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 9px;
+    font-size: 3vmin;
+}
+.ca{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ca img{
+   width: 50px;
+   height: 100px;
+}
+#btn{
+    padding: 20px;
+    color: whitesmoke;
+    padding-bottom: 40px;
+    font-size: 4vmin;
+
+}
+
+@media only screen and (max-width:620px) {
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .img, .fom{
+        width: 90%;
+        margin-top: 10px;
+    }
+    .img{
+        display: none;
+    }
+}

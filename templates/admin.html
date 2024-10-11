@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+    <header>
+        <h2>WellCome Back Admin</h2>
+        <button class="btn"><a href="/">back to home....</a></button>
+      </header>
+      
+      <div class="content">
+        <div class="img"></div>
+        <div class="fom">
+            <div class="ca">
+                <h2>ADMIN LOG IN</h2>
+                <img src="/fontawesome-free-6.4.2-web/svgs/solid/lock.svg">
+            </div>
+            <form action="">
+                <input type="text" placeholder="username" name="name">
+                <p id="wrong">incorrect username or password</p>
+                <input type="password" placeholder="password" name="password">
+                <a href="">forget password</a>
+                <button class="btn" id="btn">Log in</button>
+            </form>
+        </div>
+      </div>
+
+      <script>
+        const form = document.querySelector('form');
+        const btn = document.getElementById('btn')
+        const wrong = document.getElementById('wrong')
+
+btn.addEventListener(('click'), (e)=>{
+
+    const username  =  form.name.value;
+    const password  =  form.password.value;
+
+    e.preventDefault();
+        if(username=="am-rabeel" && password==1234){
+            window.location.replace('/data')
+        }
+        else{
+            wrong.style.display="block";
+        }
+
+    })
+    
+      </script>
+</body>
+</html>

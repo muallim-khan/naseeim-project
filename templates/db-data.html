@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+      <h2>WellCome Back Admin</h2>
+      <button class="btn"><a href="/">back to home....</a></button>
+    </header>
+
+    <div class="container">
+    </div>
+    <script>
+const container = document.querySelector('.container');
+
+const template =""
+
+const students = async () => {
+    const res = await fetch('./database');
+    const db_data = await res.json();
+    
+
+    let template =""
+    
+    db_data.forEach(data => {
+      
+        template +=`
+        <div class="card">
+        <h3>Name: ${data.name}</h3>
+        <p><span>Email: </span>${data.email}</p>
+        <p><span>Mesaage: </span>${data.message.slice(0,300)}</p>
+        <button class="btn">Delete Message<button>
+
+        </div>
+        `
+
+        container.innerHTML=template;
+    });
+
+    const btns = document.querySelectorAll('.btn');
+
+
+    btns.forEach((btn) =>{
+        btn.addEventListener(('click'), ()=>{
+            btn.parentNode.style.display="none";
+        })
+    })
+}
+
+
+window.addEventListener('DOMContentloaded', students())
+
+    </script>
+</body>
+</html>
